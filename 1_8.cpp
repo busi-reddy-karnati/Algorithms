@@ -1,6 +1,5 @@
 /*
-Check whether a string is a rotation of another using is_substring method only once
-Approach append the string to itself and check whether the other is a substring
+Given a matrix, make the row and column entirely 0 if that element is
 */
 #include<iostream>
 #include<vector>
@@ -27,20 +26,29 @@ using namespace std;
 #define mivc map<int,vector<char>>
 #define reverses(a) reverse(a.begin(),a.end())
 int main(){
-string s1,s2;
-    cin>>s1>>s2;
-    if(s1.size()!=s2.size())
-        cout<<"No";
-    else{
-        s1=s1+s1;
-        if(issubstringof(s2,s1))
-            cout<<"yes";
-        else
-        {
-            cout<<"No";
+    int a[4][4]={{1,2,3,4},{5,6,7,8},{9,0,11,12},{13,14,15,16}};
+    mii map1;
+    mii map2;
+    fi(i,0,4){
+        fi(j,0,4){
+            if(a[i][j]==0){
+                map1[i]=1;
+                map2[j]=1;
+            }
         }
-        
-
+    }
+    fi(i,0,4){
+        fi(j,0,4){
+            if(map1[i]||map2[j])
+                a[i][j]=0;
+        }
+    }
+    fi(i,0,4)
+        cout<<"Map "<<map1[i]<<"\n";
+    fi(i,0,4){
+        fi(j,0,4)
+            cout<<a[i][j]<<" ";
+        cout<<"\n";
     }
     return 0;
 }
