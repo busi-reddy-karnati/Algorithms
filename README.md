@@ -18,6 +18,6 @@
 
 [9. Given two strings, find if one is a rotation of another, using the method isSubstring only once.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/1_9.cpp)
 
-[10. Implement a Singly Linked List](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_0.cpp)
+[10. Implement a Singly Linked List.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_0.cpp)
 
-[11. Implement a Doubly Linked List](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_0_f.cpp)
+[11. Implement a Doubly Linked List.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_0_f.cpp)
