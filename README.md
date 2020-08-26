@@ -21,3 +21,21 @@
 [10. Implement a Singly Linked List.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_0.cpp)
 
 [11. Implement a Doubly Linked List.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_0_f.cpp)
+
+[12. Remove Duplicates from an Unsorted Linked List.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_1.cpp)
+
+[13. Return Kth last element in a Linked List.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_2.cpp)
+
+[14. Delete a node to which the access is given.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_3.cpp)
+
+[15. Partition the linked list such that the numbers greater than the given number are right to the elements lesser than that.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_4.cpp)
+
+[16. Add the numbers in a Linked List and create another Linked List.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_5.cpp)
+
+[17. Check if the Linked list forms a Palindrome.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_6.cpp)
+
+[18. Check if the linked list are intersecting at a point.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_7.cpp)
+
+[19. Find the entry point of a circular linked list.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/2_8.cpp)
+
+
