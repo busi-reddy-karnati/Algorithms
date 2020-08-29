@@ -58,3 +58,9 @@
 ## Trees and Graphs.
 
 [1. Implement Inorder traversal of Trees.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_1.cpp)
+
+[2. Implement Preorder traversal of Trees.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_2.cpp)
+
+
+[1. Implement Postorder traversal of Trees.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_3.cpp)
+
