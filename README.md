@@ -54,3 +54,6 @@
 [6. Keep the stack sorted, using two stacks with the least on the top.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/3_5.cpp)
 
 [7. Simulate an Animal shelter that gives dogs and cats based on their time of arrival.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/3_6.cpp)
+
+## Trees and Graphs.
+
