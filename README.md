@@ -62,5 +62,9 @@
 [2. Implement Preorder traversal of Trees.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_2.cpp)
 
 
-[1. Implement Postorder traversal of Trees.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_3.cpp)
+[3. Implement Postorder traversal of Trees.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_3.cpp)
+
+[4. Implement Min Heap using Priority Queue.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_4.cpp)
+
+[5. Implement MaxHeap using Priority Queue.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_5.cpp)
 
