@@ -68,3 +68,9 @@
 
 [5. Implement MaxHeap using Priority Queue.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_5.cpp)
 
+[6. Implement Breadth First Search.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_6.cpp)
+
+
+[7. Implement Depth First Search.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_7.cpp)
+
+
