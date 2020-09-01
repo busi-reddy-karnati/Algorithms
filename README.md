@@ -73,4 +73,6 @@
 
 [7. Implement Depth First Search.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/4_7.cpp)
 
+### [Project Euler](https://github.com/busi-reddy-karnati/Algorithms/tree/master/Project_Euler)
+
 
