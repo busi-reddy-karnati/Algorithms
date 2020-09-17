@@ -24,7 +24,35 @@ using namespace std;
 #define mcvc map<char,vector<char>>
 #define mivc map<int,vector<char>>
 #define reverses(a) reverse(a.begin(),a.end())
-int main(){
+
+int main(){//assuming a-z only
+    int bv=0;
+    string s;
+    int oc=0;
+    cin>>s;
+    for(int i=0;i<s.size();i++){
+        int num=s[i]-'a';
+        int x= 1<<num;
+        if((x&bv)>0){
+            oc-=1;
+            bv=(~x&bv);
+        }
+        else{
+            oc+=1;
+            bv=(bv|x);
+        }
+    }
+    if(oc>1){
+        cout<<"False";
+    }
+    else
+    {
+        cout<<"True";
+    }
+    
+    return 0;
+}
+int main2(){
     mci hmap;
     string s;
     cin>>s;
@@ -36,21 +64,25 @@ int main(){
     }    
 
     int arr[256];
+    int oc=0;
     fi(i,0,256){
         arr[i]=0;
     } 
     fi(i,0,s.size()){
         arr[s[i]]+=1;
+        if(arr[s[i]]%2)
+            oc+=1;
+        else
+            oc-=1;
     }    
-    int odd=0;
-    fi(i,0,256){
-        odd+=arr[i]&1;
-    }
-    cout<<odd<<"\n";
-    if(odd>1)
-        cout<<"No\n";
+    if(oc>1)
+        cout<<"False";
     else
-        cout<<"Yes\n";
+    {
+        cout<<"True";
+    }
+    
+    
     
     return 0;
-}
+}//THis counts the instances of odd. We just need odd or even, so we can have bit vector
