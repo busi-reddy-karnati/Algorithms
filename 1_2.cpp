@@ -16,7 +16,38 @@ using namespace std;
 #define fd(b,a) for(int i=b;i>a;i--)
 #define sorts(a) sort(a.begin(),a.end())
 #define reverses(a) reverse(a.begin(),a.end())
+//Assuming that the string contans only ASCII characters
 int main(){
+    int a[128]={0};
+    int b[128]={0};
+    string s1;
+    string s2;
+    int f=0;
+    cin>>s1>>s2;
+    if(s1.size()!=s2.size()){
+       cout<<"No";
+       f=1;
+    }
+    else{
+        for(int i=0;i<s1.size();i++){
+            a[s1[i]]+=1;
+            b[s2[i]]+=1;
+        }
+        for(int i=0;i<128;i++){
+            if(a[i]!=b[i]){
+                cout<<"No";
+                f=1;
+                break;
+            }
+        }
+    }
+    if(f==0)
+        cout<<"Yes";
+    return 0;
+
+}
+
+int main1(){
     string s1,s2;
     cin>>s1>>s2;
     sorts(s1);
@@ -29,4 +60,4 @@ int main(){
     return 0;
     
 
-}
+}//THis invovles sorting

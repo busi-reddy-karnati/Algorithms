@@ -50,5 +50,8 @@ c>>1;
 if((val&c)>0)//This means that at some places, they have the same value,1
 ```
 
-
+### Initializing an array with zeroes
+```cpp
+int arr[n]={0};
+```
 
