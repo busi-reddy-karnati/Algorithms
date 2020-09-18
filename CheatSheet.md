@@ -59,3 +59,8 @@ int arr[n]={0};
 ```cpp
 int freq = count(a.begin(),a.end(),element);
 ```
+
+### Initialize a vector of sixe n to false
+```cpp
+vector<bool> vis(n, false);
+```
