@@ -55,3 +55,7 @@ if((val&c)>0)//This means that at some places, they have the same value,1
 int arr[n]={0};
 ```
 
+### Counting the occurances of something in a vector or a string or an array
+```cpp
+int freq = count(a.begin(),a.end(),element);
+```
