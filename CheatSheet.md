@@ -83,3 +83,9 @@ unordered_map<int,int> hmap;
 ```md
 It isn't standard and has all the modules inside, and takes up time for compilation
 ```
+
+### Using transform to convert to lowecase and uppercase
+```cpp
+transform(s.begin(),a.end(),s.begin(),::tolower);
+//cannot use tolower, :: are for accessing a global method
+```
