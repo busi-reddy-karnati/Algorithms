@@ -64,3 +64,17 @@ int freq = count(a.begin(),a.end(),element);
 ```cpp
 vector<bool> vis(n, false);
 ```
+
+###Initial Value of Bool in a map/unordered_map takes false
+```cpp
+unordered_map<int,bool> hmap;
+//hmap[2] is false
+```
+
+
+###Initial Value of int in a map/unordered_map takes 0
+```cpp
+unordered_map<int,int> hmap;
+//hmap[2] is 0
+```
+
