@@ -94,3 +94,39 @@ transform(s.begin(),a.end(),s.begin(),::tolower);
 ```cpp
 int arr[128]={0};
 ```
+
+### Difference between unordered_map and map
+unordered_map has an average access, insertion, deletion of O(1) whereas map has an access of O(n).
+map is implemented using Red Black Tress, which is good for giving predecessor and successor 
+unordered_map is implemented using hash map.
+lower_bound, upper_bound, binary_search can be implemented in map and cannot be implemented in unordered_map
+
+### Difference between unorederd_set and set
+Same as unordered_map, map
+
+### Sort in decreasing order
+```cpp
+sort(a.begin(),a.end(),greater<int>());
+```
+
+### Sort a general data structure(eg. Map) using a non trivial value(eg.Value), in increasing order
+```cpp
+bool cmp(pair<string,int>& a, pair<string,int>& b)
+    return a.second<b.second;
+sort(a.begin(),a.end(),cmp);
+```
+
+### Complexity of generating permutations
+The complexity is O(n^2 * n!)
+
+### Hashmap and arr size
+Array just uses a continuous array chunks wheres hashmaps use pointers, storage containers, key, value pointers  etc which is a burden on the storage
+
+### Difference between string and character array
+Character array takes space in heap 
+
+### How to remove whitespaces in a String
+```cpp
+s.erase(remove(s.begin(),s.end(),' '),s.end());
+//The remove method gives the pointer where all the spaces start and erase removes them
+```
