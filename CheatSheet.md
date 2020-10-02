@@ -41,6 +41,7 @@ String another=one.substr(startindex,length);
 ```cpp
 // Ascii has 128 characters so for count/frequency we can have a 128 size integer array
 // Unicode has higher number 2^21
+//Generally we use ascii for less space consumption in space but if we want to encode higher number of letters we will have to go for the UNICODE
 ```
 
 ### Bitvector
