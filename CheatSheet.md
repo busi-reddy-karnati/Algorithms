@@ -89,3 +89,8 @@ It isn't standard and has all the modules inside, and takes up time for compilat
 transform(s.begin(),a.end(),s.begin(),::tolower);
 //cannot use tolower, :: are for accessing a global method
 ```
+
+### Initialize a total array with 0
+```cpp
+int arr[128]={0};
+```
