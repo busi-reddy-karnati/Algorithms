@@ -1,63 +1,57 @@
 /*
-Check whether one string is a permutation of another string
-Approach: Sort both the strings and see is both are equal
-This is because generating permutations is of higher time complexity than sorting
+Given two strings check whether one is a permutation of another
+Given s1 and s2
 */
-#include<iostream>
-#include<vector>
-#include<map>
 #include<string>
+#include<iostream>
 #include<algorithm>
 using namespace std;
-#define vi vector<int>
-#define vvi vector<vector<int>>
-#define total(a) a.begin(),a.end()
-#define fi(a,b) for(int i=a;i<b;i++)
-#define fd(b,a) for(int i=b;i>a;i--)
-#define sorts(a) sort(a.begin(),a.end())
-#define reverses(a) reverse(a.begin(),a.end())
-//Assuming that the string contans only ASCII characters
-int main(){
+bool isPermutation(string s1,string s2){
     int a[128]={0};
-    int b[128]={0};
-    string s1;
-    string s2;
-    int f=0;
-    cin>>s1>>s2;
-    if(s1.size()!=s2.size()){
-       cout<<"No";
-       f=1;
+    for(auto i:s1)
+        a[i]+=1;
+    for(auto i: s2){
+        a[i]-=1;
+        if(a[i]<0)
+            return false;    
     }
-    else{
-        for(int i=0;i<s1.size();i++){
-            a[s1[i]]+=1;
-            b[s2[i]]+=1;
-        }
-        for(int i=0;i<128;i++){
-            if(a[i]!=b[i]){
-                cout<<"No";
-                f=1;
-                break;
-            }
-        }
-    }
-    if(f==0)
-        cout<<"Yes";
-    return 0;
-
+    return true;
 }
 
-int main1(){
+bool isPermutation2(string s1, string s2){
+    sort(s1.begin(),s1.end());
+    sort(s2.begin(),s2.end());
+    if(s1==s2)
+        return true;
+    return false;
+}
+#include<unordered_map>
+bool isPermutation3(string s1, string s2){
+    unordered_map<char,int> hmap;
+    for(auto i:s1)
+        hmap[i]++;
+    for(auto i:s2){
+        hmap[i]--;
+        if(hmap[i]<0)
+            return false;
+    }
+    return true;
+}
+int main(){
     string s1,s2;
     cin>>s1>>s2;
-    sorts(s1);
-    sorts(s2);
-    if(s1==s2)
-        cout<<"True";
+    if(isPermutation(s1,s2))
+        cout<<"check 1: Yes, One is a permutation of another\n";
     else
-        cout<<"False";
-
-    return 0;
+        cout<<"check 1: No, One is not a permutation of another\n";
+    if(isPermutation2(s1,s2))
+        cout<<"check 2: Yes, One is a permutation of another\n";
+    else
+        cout<<"check 2: No, One is not a permutation of another\n";
+    if(isPermutation3(s1,s2))
+        cout<<"check 3: Yes, One is a permutation of another\n";
+    else
+        cout<<"check 3: No, One is not a permutation of another\n";
     
-
-}//THis invovles sorting
+    return 0;
+}
