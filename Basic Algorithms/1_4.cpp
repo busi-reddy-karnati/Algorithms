@@ -1,88 +1,103 @@
 /*
-To find if the given string has a permutation that is palindrome
-Approach: Use a hash map and store the counts of each char. If more that one character has odd number of occurances, it isn't
+Given a string, find if a permutation can form a palindrome
 */
 #include<iostream>
-#include<vector>
-#include<map>
 #include<string>
 #include<algorithm>
 using namespace std;
-#define vi vector<int>
-#define vvi vector<vector<int>>
-#define total(a) a.begin(),a.end()
-#define fi(i,a,b) for(int i=a;i<b;i++)
-#define finds(x,a) find(a.begin(),a.end(),x)
-#define NO_OF_CHARS 256
-#define fd(i,b,a) for(int i=b;i>a;i--)
-#define sorts(a) sort(a.begin(),a.end())
-#define mii map<int,int>
-#define mci map<char,int>
-#define msi map<string,int>
-#define mivi map<int,vector<int>>
-#define mcvi map<char,vector<int>>
-#define mcvc map<char,vector<char>>
-#define mivc map<int,vector<char>>
-#define reverses(a) reverse(a.begin(),a.end())
+bool palindrome(string s){
+    int n=s.size();
+    for(int i=0;i<(n/2);i++){
+        if(s[i]!=s[n-1-i])
+            return false;
+    }
+    return true;
+}
+bool isPalindrome(string s){
+    sort(s.begin(),s.end());
+    do{
+        if(palindrome(s))
+            return true;
+    }while(next_permutation(s.begin(),s.end()));
+    return false;
+}
 
-int main(){//assuming a-z only
-    int bv=0;
-    string s;
+bool isPalindrome1(string s){//assuming ascii values
+    bool arr[128]={false};
     int oc=0;
-    cin>>s;
-    for(int i=0;i<s.size();i++){
-        int num=s[i]-'a';
-        int x= 1<<num;
-        if((x&bv)>0){
+    for(char c:s){
+        if(arr[c]){
+            arr[c]=false;
             oc-=1;
-            bv=(~x&bv);
         }
         else{
+            arr[c]=true;
             oc+=1;
-            bv=(bv|x);
         }
     }
-    if(oc>1){
-        cout<<"False";
-    }
-    else
-    {
-        cout<<"True";
-    }
-    
-    return 0;
+    if(oc>1)
+        return false;
+    return true;
 }
-int main2(){
-    mci hmap;
-    string s;
-    cin>>s;
-    //To remove spaces
-    fd(i,s.size()-1,-1){
-        if(s[i]==' '){
-            s.erase(s.begin()+i);
-        }
-    }    
-
-    int arr[256];
+#include<unordered_map>
+bool isPalindrome2(string s){
     int oc=0;
-    fi(i,0,256){
-        arr[i]=0;
-    } 
-    fi(i,0,s.size()){
-        arr[s[i]]+=1;
-        if(arr[s[i]]%2)
+    unordered_map<char,int> hmap;
+    for(char c:s){
+        ++hmap[c];
+        if(hmap[c]%2){
             oc+=1;
+        }
         else
-            oc-=1;
+        {
+            oc--;
+        }        
     }    
     if(oc>1)
-        cout<<"False";
-    else
-    {
-        cout<<"True";
+        return false;
+    return true;
+}
+
+bool isPalindrome3(string s){
+    //This will work only if there are a-z(Can be extended for A-Z)
+    int n=s.size();
+    int bitvec=0;
+    for(char c:s){
+        bitvec=bitvec^(1<<(c-'a'));
     }
-    
-    
-    
+    int oc=0;
+    while(bitvec){
+        oc+=bitvec%2;
+        bitvec=bitvec>>1;
+    }
+    if(oc>1)
+        return false;
+    return true;
+}
+
+
+int main(){
+    string s;
+    cin>>s;
+    cout<<"Check 1 \n";
+    if(isPalindrome(s))
+        cout<<"Yes one permutaion is a palindrome\n";
+    else
+        cout<<"No not a palindrome\n";
+    cout<<"Check 2 \n";
+    if(isPalindrome1(s))
+        cout<<"Yes one permutaion is a palindrome\n";
+    else
+        cout<<"No not a palindrome\n";
+    cout<<"Check 3 \n";
+    if(isPalindrome2(s))
+        cout<<"Yes one permutaion is a palindrome\n";
+    else
+        cout<<"No not a palindrome\n";
+    cout<<"Check 4 \n";
+    if(isPalindrome3(s))
+        cout<<"Yes one permutaion is a palindrome\n";
+    else
+        cout<<"No not a palindrome\n";
     return 0;
-}//THis counts the instances of odd. We just need odd or even, so we can have bit vector
+}
