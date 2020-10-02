@@ -66,16 +66,20 @@ int freq = count(a.begin(),a.end(),element);
 vector<bool> vis(n, false);
 ```
 
-###Initial Value of Bool in a map/unordered_map takes false
+### Initial Value of Bool in a map/unordered_map takes false
 ```cpp
 unordered_map<int,bool> hmap;
 //hmap[2] is false
 ```
 
 
-###Initial Value of int in a map/unordered_map takes 0
+### Initial Value of int in a map/unordered_map takes 0
 ```cpp
 unordered_map<int,int> hmap;
 //hmap[2] is 0
 ```
 
+### Don't use #include<bits/stdc++.h>
+```md
+It isn't standard and has all the modules inside, and takes up time for compilation
+```

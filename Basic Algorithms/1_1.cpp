@@ -53,6 +53,9 @@ int main2(){
 //We may assume that the string contains only a-z 
 int main4(){
     string s="absAjk";
+    if(s.size()>128){
+        cout<<"Duplicate";
+    }
     bool a[128]={false};
     for(char c:s){
         if(a[c]){
