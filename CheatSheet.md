@@ -140,3 +140,6 @@ s.substr(i,j);
 ```cpp
 if(s.find(t)!=string::npos)
 ```
+
+### How to intialize a 2d vec with zeros(n*m)
+vector<vector<int>> vec(n,vector<int>(m,0));
