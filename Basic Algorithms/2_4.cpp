@@ -59,17 +59,7 @@ class LinkedList{
 };
 Node* partition(Node *head, int n){
     Node *temp=head;
-    while(temp->next!=NULL){
-        if(temp->next->val>n){
-            Node *temp2=temp->next;
-            temp->next=temp2->next;
-            temp2->next=head;
-            head=temp2;
-
-        }
-        temp=temp->next;
-    }
-    temp=head;
+    //There is no need of putting bigger first. Rearranging smaller ones does the job
     while(temp->next!=NULL){
         if(temp->next->val<n){
             Node *temp2=temp->next;
