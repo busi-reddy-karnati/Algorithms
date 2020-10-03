@@ -130,3 +130,13 @@ Character array takes space in heap
 s.erase(remove(s.begin(),s.end(),' '),s.end());
 //The remove method gives the pointer where all the spaces start and erase removes them
 ```
+
+### How to create a Substring from index i to j (both included)
+```cpp
+s.substr(i,j);
+```
+
+### How to find if a string is a substring of another
+```cpp
+if(s.find(t)!=string::npos)
+```
