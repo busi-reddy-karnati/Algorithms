@@ -68,13 +68,14 @@ Node *giveaccess(Node *head, int num){
     return NULL;
 }
 
-void removemiddle(Node *head, Node *temp){
+bool removemiddle( Node *temp){
     
-    while(head->next){
-        if(head->next==temp)
-            head->next=head->next->next;
-        head=head->next;
+    if(!temp ||temp->next==NULL ){
+        return false;
     }
+    temp->val=temp->next->val;
+    temp->next=temp->next->next;
+    return true;
 }
 int main(){
     LinkedList* l=new LinkedList();
@@ -85,7 +86,7 @@ int main(){
     l->insertnode(2);
     Node *temp=giveaccess(l->head,3);
     l->display();
-    removemiddle(l->head,temp);
+    cout<<removemiddle(temp);
     l->display();
     return 0;
 }
