@@ -143,3 +143,18 @@ if(s.find(t)!=string::npos)
 
 ### How to intialize a 2d vec with zeros(n*m)
 vector<vector<int>> vec(n,vector<int>(m,0));
+
+
+### Using the 'using' in cpp
+```cpp
+using hashmap = unordered_map<int,int>;
+```
+
+### USe of ternary operator ?
+```cpp
+n = expression1 ? expression2 : expression3
+/*
+Expression1 is boolean. If expression1 is true, then the value of n is expression 2 else expression3
+*/
+
+```
