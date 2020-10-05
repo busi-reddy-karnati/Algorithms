@@ -156,5 +156,9 @@ n = expression1 ? expression2 : expression3
 /*
 Expression1 is boolean. If expression1 is true, then the value of n is expression 2 else expression3
 */
-
 ```
+
+### careful instruction while using hashmaps
+If you are calling a hashmap values, it allocates space to it before giving you the value. In integer case it is 0.
+For example if there is no hmap[4], it gives you 0 by first allocating it then giving back to you. 
+So it is adviced to find if it exists and then ask for a value
