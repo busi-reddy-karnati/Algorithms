@@ -73,6 +73,10 @@
 
 [7. Implement Depth First Search.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/Basic%20Algorithms/4_7.cpp)
 
+[8. Given two nodes, find if there is path between the two in a graph.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/Basic%20Algorithms/4_1_actual.cpp)
+
+[9. Given a sorted array of integers, find the binary tree with smallest height.](https://github.com/busi-reddy-karnati/Algorithms/blob/master/Basic%20Algorithms/4_2_actual.cpp)
+
 ### [Project Euler](https://github.com/busi-reddy-karnati/Algorithms/tree/master/Project_Euler)
 
 
